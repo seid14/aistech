@@ -192,10 +192,9 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-900 dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-400">hello@aistech.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">info@aistech.io</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="flex-shrink-0">
                     <svg className="h-6 w-6 text-gray-400 mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,7 +203,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-gray-900 dark:text-white">Phone</p>
-                    <p className="text-gray-600 dark:text-gray-400">+1 (555) 123-4567</p>
+                    <p className="text-gray-600 dark:text-gray-400">+251777495222</p>
                   </div>
                 </div>
 
@@ -218,9 +217,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm font-medium text-gray-900 dark:text-white">Address</p>
                     <p className="text-gray-600 dark:text-gray-400">
-                      123 AI Street<br />
-                      Tech District<br />
-                      San Francisco, CA 94105
+                      Addis Ababa, Ethiopia
                     </p>
                   </div>
                 </div>

@@ -1,6 +1,6 @@
 const WhatsAppButton = () => {
   // Configuration - Update these values for your business
-  const phoneNumber = "+917447692345"; // Replace with your actual WhatsApp number
+  const phoneNumber = "+251777495222"; // Replace with your actual WhatsApp number
   const message = "Hi! I'm interested in your software development services. Can we discuss my project?";
 
   const whatsappUrl = `https://wa.me/${phoneNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(message)}`;
