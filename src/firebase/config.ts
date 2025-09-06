@@ -23,14 +23,16 @@ const firebaseConfig = import.meta.env.PROD ? {
 };
 
 // Debug: Check configuration
-console.log('Firebase Config Debug:', {
-  usingProductionConfig: import.meta.env.PROD,
-  hasApiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
-  hasProjectId: !!import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  projectId: import.meta.env.PROD ? 'aistech-b9c86' : (import.meta.env.VITE_FIREBASE_PROJECT_ID || 'NOT SET'),
+console.log('Firebase Config Status:', {
   environment: import.meta.env.MODE,
-  isDev: import.meta.env.DEV,
-  isProd: import.meta.env.PROD
+  usingProductionConfig: import.meta.env.PROD,
+  envVarsAvailable: {
+    apiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
+    projectId: !!import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    authDomain: !!import.meta.env.VITE_FIREBASE_AUTH_DOMAIN
+  },
+  activeConfig: import.meta.env.PROD ? 'production-hardcoded' : 'development-env-vars',
+  projectId: import.meta.env.PROD ? 'aistech-b9c86' : (import.meta.env.VITE_FIREBASE_PROJECT_ID || 'NOT SET')
 });
 
 const app = initializeApp(firebaseConfig);
