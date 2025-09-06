@@ -14,13 +14,15 @@ const firebaseConfig = {
 };
 
 // Debug: Check if environment variables are loaded
-if (import.meta.env.DEV) {
-  console.log('Firebase Config Debug:', {
-    hasApiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
-    hasProjectId: !!import.meta.env.VITE_FIREBASE_PROJECT_ID,
-    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID
-  });
-}
+console.log('Firebase Config Debug:', {
+  hasApiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
+  hasProjectId: !!import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'NOT SET',
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY ? 'SET' : 'NOT SET',
+  environment: import.meta.env.MODE,
+  isDev: import.meta.env.DEV,
+  isProd: import.meta.env.PROD
+});
 
 const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
