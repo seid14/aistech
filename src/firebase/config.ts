@@ -3,7 +3,16 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore } from "firebase/firestore";
 
-const firebaseConfig = {
+// Temporary production fix - will use env vars when working
+const firebaseConfig = import.meta.env.PROD ? {
+  apiKey: "AIzaSyAYj8IUMB_3fjAQh7DMYrMHdHE2sddA_uU",
+  authDomain: "aistech-b9c86.firebaseapp.com",
+  projectId: "aistech-b9c86",
+  storageBucket: "aistech-b9c86.firebasestorage.app",
+  messagingSenderId: "686730869542",
+  appId: "1:686730869542:web:13e8c8ca7edc5ef1111fe7",
+  measurementId: "G-5DG7X0CRK2"
+} : {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "demo-api-key",
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "demo-project.firebaseapp.com",
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "demo-project",
@@ -13,11 +22,12 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
-// Debug: Check if environment variables are loaded
+// Debug: Check configuration
 console.log('Firebase Config Debug:', {
+  usingProductionConfig: import.meta.env.PROD,
   hasApiKey: !!import.meta.env.VITE_FIREBASE_API_KEY,
   hasProjectId: !!import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || 'NOT SET',
+  projectId: import.meta.env.PROD ? 'aistech-b9c86' : (import.meta.env.VITE_FIREBASE_PROJECT_ID || 'NOT SET'),
   environment: import.meta.env.MODE,
   isDev: import.meta.env.DEV,
   isProd: import.meta.env.PROD
