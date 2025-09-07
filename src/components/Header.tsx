@@ -26,8 +26,8 @@ const Header = () => {
               <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
               <div className="absolute inset-0 w-3 h-3 bg-green-400 rounded-full animate-ping opacity-75"></div>
             </div> */}
-            <a href="#home" className="group text-xl md:text-2xl font-bold bg-gradient-to-r from-aistech-blue to-sky-500 bg-clip-text text-transparent cursor-pointer transition-all duration-300 hover:scale-105">
-              <span className="relative">
+            <a href="#home" className="group text-xl md:text-2xl font-bold text-aistech-blue cursor-pointer transition-all duration-300 hover:scale-105">
+              <span className="relative bg-gradient-to-r from-aistech-blue to-sky-500 bg-clip-text text-transparent">
                 Aistech
                 {/* Tech-inspired underline animation */}
                 <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-aistech-blue to-sky-500 group-hover:w-full transition-all duration-500"></div>

@@ -172,3 +172,4 @@ If you encounter any issues:
 4. Review the security rules
 
 Your Firebase integration is now ready! 🎉
+

@@ -40,3 +40,4 @@ console.log('\n📖 For detailed instructions, see FIREBASE_SETUP.md');
 
 console.log('\n🎉 Firebase setup helper completed!');
 console.log('Run "npm run dev" to test your setup.');
+
